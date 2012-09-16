@@ -1,4 +1,24 @@
+#! /bin/sh
+if [ -f ~/.gitconfig ]
+then
+  rm ~/.gitconfig
+fi
 ln ./gitconfig ~/.gitconfig
+
+if [ -f ~/.gitignore_global ]
+then
+  rm ~/.gitignore_global
+fi
 ln ./gitignore_global ~/.gitignore_global
+
+if [ -f ~/.bash_profile ]
+then
+  rm ~/.bash_profile
+fi
 ln ./bash_profile ~/.bash_profile
+
+if [ -f ~/.vimrc ]
+then
+  rm ~/.vimrc
+fi
 ln ./vimrc ~/.vimrc
