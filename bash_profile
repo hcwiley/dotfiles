@@ -17,10 +17,18 @@ alias syncdb='python manage.py syncdb'
 alias mig='python manage.py migrate'
 alias shell='python manage.py shell'
 alias hcw='cd /Users/hcwiley/decode72/hcwiley-django/portfolio'
-alias code_art='cd /Users/hcwiley/github/code-art/git/code.art/code.art72.org/tub'
+alias decode72='cd /Users/hcwiley/decode72'
+alias kinobi='cd /Users/hcwiley/kinobi/'
+alias code_art='cd /Users/hcwiley/decode72/code-art/git/code.art/code.art72.org/tub'
 alias git='hub'
 #alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+##
+# Your previous /Users/hcwiley/.bash_profile file was backed up as /Users/hcwiley/.bash_profile.macports-saved_2012-03-01_at_19:24:52
+##
 
+# MacPorts Installer addition on 2012-03-01_at_19:24:52: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
 # Add local node modules to the path
 export PATH=./node_modules/.bin:$PATH
 
