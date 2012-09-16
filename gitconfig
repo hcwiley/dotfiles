@@ -5,7 +5,7 @@
 [github]
 	username = hcwiley
 [core]
-	editor = vi
+	editor = /usr/bin/vim
 	excludesfile = /Users/hcwiley/.gitignore_global
 [credential]
 	helper = osxkeychain
