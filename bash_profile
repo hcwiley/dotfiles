@@ -21,7 +21,7 @@ alias decode72='cd /Users/hcwiley/decode72'
 alias kinobi='cd /Users/hcwiley/kinobi/'
 alias code_art='cd /Users/hcwiley/decode72/code-art/git/code.art/code.art72.org/tub'
 alias git='hub'
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+#alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 ##
 # Your previous /Users/hcwiley/.bash_profile file was backed up as /Users/hcwiley/.bash_profile.macports-saved_2012-03-01_at_19:24:52
 ##
