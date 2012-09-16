@@ -1,0 +1,4 @@
+ln ./gitconfig ~/.gitconfig
+ln ./gitignore_global ~/.gitignore_global
+ln ./bash_profile ~/.bash_profile
+ln ./vimrc ~/.vimrc
