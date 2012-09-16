@@ -1,0 +1,11 @@
+[user]
+	name = H. Cole Wiley
+	email = hcwiley@gmail.com
+	username = hcwiley
+[github]
+	username = hcwiley
+[core]
+	editor = vi
+	excludesfile = /Users/hcwiley/.gitignore_global
+[credential]
+	helper = osxkeychain
