@@ -17,6 +17,8 @@ call vundle#rc()
 " let Vundle manage Vundle, required
 Bundle 'gmarik/vundle'
 
+Bundle 'http://github.com/tpope/vim-pathogen'
+
 " my Bundles here ---------------------
 "Bundle 'altercation/vim-colors-solarized'
 Bundle 'flazz/vim-colorschemes'
@@ -48,10 +50,13 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'git://github.com/groenewege/vim-less.git'
 " ...
 
 filetype plugin indent on " required!
 """ end Vundle """""""""""""""""""""""""
+
+call pathogen#runtime_append_all_bundles()
 
 " basics
 set encoding=utf-8
