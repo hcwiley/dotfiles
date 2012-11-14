@@ -35,3 +35,6 @@ export PATH=./node_modules/.bin:$PATH
 #git stuff
 source ~/.git-completion.bash
 alias gcam='git commit -am'
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
