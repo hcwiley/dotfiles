@@ -48,9 +48,10 @@ Bundle 'tpope/vim-rails.git'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
-" non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'git://github.com/groenewege/vim-less.git'
+Bundle 'git://github.com/vim-scripts/Processing.git'
+Bundle 'git://github.com/vim-scripts/Arduino-syntax-file.git'
 " ...
 
 filetype plugin indent on " required!
@@ -113,7 +114,28 @@ set smarttab
 au FileType make setlocal noexpandtab
 
 " 4 tab width for python 
-au FileType python setlocal ts=4 sts=4 sw=4
+au FileType python setlocal ts=2 sts=2 sw=2
+
+augroup filetype
+        au!
+        au! BufRead,BufNewFile *.module    set filetype=php
+        au! BufRead,BufNewFile *..inc      set filetype=php
+        au! BufRead,BufNewFile *.install   set filetype=php
+        au! BufRead,BufNewFile *.spec      set filetype=ruby
+        au! BufRead,BufNewFile *.test      set filetype=ruby
+        au! BufRead,BufNewFile *.erb       set filetype=eruby
+        au! BufRead,BufNewFile *.hamlc.erb set filetype=haml
+        au! BufRead,BufNewFile *.js.erb    set filetype=javascript
+        au! BufRead,BufNewFile *.hamlc     set filetype=haml
+        au! BufRead,BufNewFile *.jbuilder  set filetype=ruby
+        au! BufRead,BufNewFile *.pp        set filetype=puppet
+        au! BufRead,BufNewFile *.ttl       set filetype=n3
+        au! BufRead,BufNewFile *.coffee    set filetype=coffee
+        au! BufRead,BufNewFile *.scss      set filetype=scss
+        au! BufRead,BufNewFile *.ino       set filetype=processing
+        au! BufRead,BufNewFile *.pde       set filetype=processing
+augroup END
+filetype plugin on
 
 " don't be dumb with <Nul>
 imap <Nul> <Space>
