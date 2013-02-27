@@ -45,12 +45,13 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
+Bundle 'git://github.com/groenewege/vim-less.git'
+Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'git://github.com/kingbin/vim-arduino.git'
+Bundle 'git://github.com/sophacles/vim-processing.git'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
-" non github repos
-Bundle 'git://git.wincent.com/command-t.git'
-Bundle 'git://github.com/groenewege/vim-less.git'
 " ...
 
 filetype plugin indent on " required!
