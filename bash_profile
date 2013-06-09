@@ -37,6 +37,7 @@ export PATH="/Users/hcwiley/github/homebrew/Cellar/node/0.10.5/bin/:$PATH"
 source ~/.git-completion.bash
 alias gcam='git commit -am'
 alias gcm='git commit -m'
+alias gss='git status'
 
 # {{{
 # Node Completion - Auto-generated, do not touch.
