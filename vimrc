@@ -152,4 +152,5 @@ if has("autocmd")
 endif
 if has("gui_running")
   set guioptions-=T
+  highlight ExtraWhitespace ctermbg=red guibg=#aa0000
 endif
