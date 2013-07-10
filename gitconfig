@@ -9,3 +9,5 @@
 	excludesfile = /Users/hcwiley/.gitignore_global
 [credential]
 	helper = osxkeychain
+[color]
+  	ui = true
