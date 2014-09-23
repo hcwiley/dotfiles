@@ -1,64 +1,41 @@
-""" Vundle """""""""""""""""""""""""""""""""""""""""""""
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" " alternatively, pass a path where Vundle should install plugins
+" "call vundle#begin('~/some/path/here')
 "
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
-
-set nocompatible               " be iMproved
-filetype off                   " required!
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle, required
-Bundle 'gmarik/vundle'
-
-Bundle 'http://github.com/tpope/vim-pathogen'
-
-" my Bundles here ---------------------
-"Bundle 'altercation/vim-colors-solarized'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'ervandew/supertab'
-Bundle 'fholgado/minibufexpl.vim'
-Bundle 'fs111/pydoc.vim'
-Bundle 'godlygeek/tabular'
-Bundle 'guileen/vim-node'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'mileszs/ack.vim'
-Bundle 'mitechie/pyflakes-pathogen'
-Bundle 'pangloss/vim-javascript'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-markdown'
+" " let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+"Bundle 'tpope/vim-pathogen'
+Plugin 'tpope/vim-fugitive'
+Plugin 'L9'
+Plugin 'git://git.wincent.com/command-t.git'
 Bundle 'vim-scripts/The-NERD-tree'
-Bundle 'wavded/vim-stylus'
-" end my Bundles ----------------------
+Bundle 'ervandew/supertab'
+Bundle 'godlygeek/tabular'
+"Bundle "davidhalter/jedi-vim"
+"
+" " All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
-" original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
-Bundle 'git://github.com/groenewege/vim-less.git'
-Bundle 'git://git.wincent.com/command-t.git'
-Bundle 'git://github.com/kingbin/vim-arduino.git'
-Bundle 'git://github.com/sophacles/vim-processing.git'
-" vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-" ...
-
-filetype plugin indent on " required!
-""" end Vundle """""""""""""""""""""""""
-
-call pathogen#runtime_append_all_bundles()
-
+" " To ignore plugin indent changes, instead use:
+" "filetype plugin on
+" "
+" " Brief help
+" " :PluginList       - lists configured plugins
+" " :PluginInstall    - installs plugins; append `!` to update or just
+" :PluginUpdate
+" " :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" " :PluginClean      - confirms removal of unused plugins; append `!` to
+" auto-approve removal
+" "
+" " see :h vundle for more details or wiki for FAQ
+" " Put your non-Plugin stuff after this line
+"
 " basics
 set encoding=utf-8
 set laststatus=2   " always show status bar
@@ -68,8 +45,6 @@ let mapleader=","  " i hate typing \
 set number
 syntax enable
 set background=dark
-colorscheme solarized "darkblue
-let g:Powerline_symbols = 'fancy'
 "magical things can happen with the mouse in MacVim
 set mouse=a
 
@@ -79,41 +54,39 @@ map <leader>vs :source $MYVIMRC<CR>
 map <leader>ve :e $MYVIMRC<CR>
 map <leader>x :set paste<CR>"+p<CR>:set nopaste<CR>
 map <leader>ack <Esc>:Ack!
-map <leader>a :Tabularize /
-map <leader>ae :Tabularize /=<CR>
-map <leader>ac :Tabularize /:<CR>
 map <leader>w :MiniBufExplorer<CR>
 map <leader>r <c-r>
 map <leader>c :CommandT<CR>
+map <leader>r :set relativenumber<CR>
+map <leader>a :set number<CR>
 " nav mappings
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
-" dictionaries
-au FileType javascript setlocal dictionary+=$HOME/.vim/bundle/vim-node/dict/node.dict
-au FileType coffee setlocal dictionary+=$HOME/.vim/bundle/vim-node/dict/node.dict
-
-" not sure about this
-let g:SuperTabDefaultCompletionType = "context"
+" doxygen mappings
+map <leader>d :Dox<CR>
 
 " case insensitive (unless uppercase is typed)
 set ignorecase
 set smartcase
 
-" let's ignore some files
-:set wildignore +=.git,node_modules/**,docs/**,**.png,**.jpg,**vendor/**
-let g:CommandTMaxHeight = 10
-let g:CommandTMinHeight = 10
-
 " default tabs
 set ts=2 sts=2 sw=2
 set expandtab
 set smarttab
+set autoindent
 au FileType make setlocal noexpandtab
+au FileType make setlocal ts=4 sts=4 sw=4
+au FileType make set filetype=make
 
-" 4 tab width for python 
+" let's ignore some files
+:set wildignore +=.git,node_modules/**,docs/**,**.png,**.jpg,**vendor/**,lib/**,libs/**
+let g:CommandTMaxHeight = 10
+let g:CommandTMinHeight = 10
+
+" 2 tab width for python
 au FileType python setlocal ts=2 sts=2 sw=2
 
 augroup filetype
@@ -132,25 +105,9 @@ augroup filetype
         au! BufRead,BufNewFile *.ttl       set filetype=n3
         au! BufRead,BufNewFile *.coffee    set filetype=coffee
         au! BufRead,BufNewFile *.scss      set filetype=scss
-        au! BufRead,BufNewFile *.ino       set filetype=processing
-        au! BufRead,BufNewFile *.pde       set filetype=processing
+        au! BufRead,BufNewFile *.bgs       set filetype=ruby
+        au! BufRead,BufNewFile *.nut       set filetype=cpp
+        au! BufRead,BufNewFile *.mlx       set filetype=xml
+        au! BufRead,BufNewFile *.mlx.*     set filetype=xml
 augroup END
 filetype plugin on
-
-" don't be dumb with <Nul>
-imap <Nul> <Space>
-map  <Nul> <Nop>
-vmap <Nul> <Nop>
-cmap <Nul> <Nop>
-nmap <Nul> <Nop>
-
-" for milesza/ack.vim
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-       \| exe "normal! g'\"" | endif
-endif
-if has("gui_running")
-  set guioptions-=T
-  highlight ExtraWhitespace ctermbg=red guibg=#aa0000
-endif
