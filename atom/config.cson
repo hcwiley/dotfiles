@@ -1,0 +1,22 @@
+'*':
+  'exception-reporting':
+    'userId': 'c7cb5839-3a79-e14d-0faa-5a69a83f0dcc'
+  'release-notes':
+    'viewedVersion': '0.94.0'
+  'welcome':
+    'showOnStartup': false
+  'metrics':
+    'userId': '97505b325b93863109a7d25d816679e74fe9832e'
+  'editor':
+    'fontFamily': 'TheMixMono'
+    'fontSize': 13
+    'softWrap': true
+    'invisibles': {}
+  'core':
+    'disabledPackages': [
+      'vim-mode'
+    ]
+    'themes': [
+      'atom-dark-ui'
+      'solarized-dark-syntax'
+    ]
