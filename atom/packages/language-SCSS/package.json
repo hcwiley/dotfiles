@@ -1,0 +1,26 @@
+{
+  "name": "language-SCSS",
+  "version": "0.2.0",
+  "description": "SCSS support",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonnyhaynes/language-SCSS"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {},
+  "readme": "# language-SCSS\n\nAn Atom conversion of the TextMate Bundle for SCSS support\n\nAdds syntax highlighting and snippets for SCSS files into Atom.\n\nI have only converted this from the TextMate bundle, and have made no other changes if you feel anything is missing or is needed please feel free to fork and drop me a merge request.\n\nOriginally [converted](http://atom.io/docs/latest/converting-a-text-mate-bundle) from the [SCSS TextMate](https://github.com/MarioRicalde/SCSS.tmbundle) bundle.\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/jonnyhaynes/language-SCSS/issues"
+  },
+  "homepage": "https://github.com/jonnyhaynes/language-SCSS",
+  "_id": "language-SCSS@0.2.0",
+  "dist": {
+    "shasum": "0ea14d1e1c76544e7f2864a53a5ae7874ad4c446"
+  },
+  "_resolved": "/private/var/folders/2p/959_frn57554h77_3t2ww4fm0000gn/T/d-115012-14271-8r2y3e/package.tgz",
+  "_from": "/private/var/folders/2p/959_frn57554h77_3t2ww4fm0000gn/T/d-115012-14271-8r2y3e/package.tgz"
+}
