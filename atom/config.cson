@@ -1,22 +1,29 @@
-'*':
-  'exception-reporting':
-    'userId': 'c7cb5839-3a79-e14d-0faa-5a69a83f0dcc'
-  'release-notes':
-    'viewedVersion': '0.94.0'
-  'welcome':
-    'showOnStartup': false
-  'metrics':
-    'userId': '97505b325b93863109a7d25d816679e74fe9832e'
-  'editor':
-    'fontFamily': 'TheMixMono'
-    'fontSize': 13
-    'softWrap': true
-    'invisibles': {}
-  'core':
-    'disabledPackages': [
-      'vim-mode'
+"*":
+  "exception-reporting":
+    userId: "c7cb5839-3a79-e14d-0faa-5a69a83f0dcc"
+  "release-notes":
+    viewedVersion: "0.94.0"
+  welcome:
+    showOnStartup: false
+  metrics:
+    userId: "97505b325b93863109a7d25d816679e74fe9832e"
+  editor:
+    fontFamily: "TheMixMono"
+    softWrap: true
+    invisibles: {}
+    fontSize: 14
+  core:
+    disabledPackages: [
+      "vim-mode"
     ]
-    'themes': [
-      'atom-dark-ui'
-      'solarized-dark-syntax'
+    themes: [
+      "atom-dark-ui"
+      "solarized-dark-syntax"
     ]
+  Rdio: {}
+  "linter-erb":
+    rubyOnRailsMode: true
+  "atom-beautify":
+    _analyticsUserId: "e0e76b02-204d-426b-ad24-a68eb7a006cd"
+    css_newline_between_rules: true
+    html_end_with_newline: true

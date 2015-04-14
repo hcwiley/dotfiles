@@ -27,8 +27,11 @@
   'ctrl-k': 'window:focus-pane-above'
 
 '.editor':
-  'cmd-`': 'autocomplete:toggle'
+  'alt-tab': 'autocomplete:toggle'
 
 '.platform-darwin .editor':
   'alt-up': 'column-select:up'
   'alt-down': 'column-select:down'
+
+'atom-text-editor:not([mini])':
+  'ctrl-x': 'editor:delete-line'
